@@ -16,13 +16,17 @@
   </head>
   <body>
     <div class="container">
-    <h1 class="text-center mt-2 mb-4">Jovian Careers</h1>
+    <h1 class="text-center mt-2 mb-4">{{company_name}}Careers</h1>
     <img id="banner" img src="https://jovian-careers-website.snoektim.repl.co/static/career.avif">
     <h2 class="text-center mt-2">About Jovian</h2>
     <p>
     <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quisque id diam vel quam elementum pulvinar etiam non. Mollis nunc sed id semper risus in. Felis imperdiet proin fermentum leo vel. Feugiat nisl pretium fusce id velit ut tortor pretium. Et malesuada fames ac turpis egestas. Tincidunt eget nullam non nisi est sit amet facilisis. Elit duis tristique sollicitudin nibh sit. Metus aliquam eleifend mi in nulla posuere. Est sit amet facilisis magna etiam tempor orci. Suscipit tellus mauris a diam maecenas. Feugiat pretium nibh ipsum consequat nisl vel. Sed nisi lacus sed viverra tellus in hac. Ut eu sem integer vitae justo. Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo nec. Eu facilisis sed odio morbi quis commodo odio aenean.</p>
     <h2 class="text-center">Open Positions</h2>
-    <p>TODO - Show the jobs here</p>
+    <p>
+      {% for job in jobs %}
+      {% include 'jobitem.html' %}
+      {% endfor %}
+         </p>
       <div class="text-center"
       <div>
     <button class="btn btn-primary btn-lg">Contact Us</button>
